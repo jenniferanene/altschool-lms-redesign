@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio-quality dashboard shell redesign for the AltSchool Africa Learning Management System."
+    />
+    <title>AltSchool LMS Dashboard Shell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="app-shell" data-sidebar="open">
+      <div class="sidebar-rail">
+        <aside class="sidebar" aria-label="Primary navigation">
+          <div class="sidebar__header">
+            <a class="brand" href="#" aria-label="AltSchool dashboard home">
+              <span class="brand__mark" aria-hidden="true">A</span>
+              <span class="brand__copy">
+                <span class="brand__name">AltSchool</span>
+                <span class="brand__meta">Africa LMS</span>
+              </span>
+            </a>
+            <button class="icon-button sidebar__close" type="button" data-sidebar-toggle aria-label="Close navigation">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <nav class="sidebar__nav" aria-label="Workspace">
+            <p class="sidebar__eyebrow">Workspace</p>
+            <a class="nav-item nav-item--active" href="#" aria-current="page">
+              <span class="nav-item__icon" aria-hidden="true">⌘</span>
+              Overview
+            </a>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">▣</span>
+              Courses
+            </a>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">◷</span>
+              Schedule
+            </a>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">✓</span>
+              Assignments
+              <span class="badge badge--neutral">4</span>
+            </a>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">◌</span>
+              Community
+            </a>
+          </nav>
+
+          <nav class="sidebar__nav" aria-label="Account">
+            <p class="sidebar__eyebrow">Account</p>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">◇</span>
+              Progress
+            </a>
+            <a class="nav-item" href="#">
+              <span class="nav-item__icon" aria-hidden="true">⚙</span>
+              Settings
+            </a>
+          </nav>
+
+          <section class="sidebar-card" aria-labelledby="cohort-title">
+            <span class="badge badge--success">Active cohort</span>
+            <h2 id="cohort-title">School of Engineering</h2>
+            <p>Dashboard shell ready for learning content, analytics, and cohort workflows.</p>
+            <button class="button button--secondary button--small" type="button">View roadmap</button>
+          </section>
+        </aside>
+      </div>
+
+      <div class="sidebar-backdrop" data-sidebar-toggle aria-hidden="true"></div>
+
+      <div class="app-shell__main">
+        <header class="topbar">
+          <div class="topbar__left">
+            <button class="icon-button topbar__menu" type="button" data-sidebar-toggle aria-label="Open navigation">
+              <span aria-hidden="true">☰</span>
+            </button>
+            <div>
+              <p class="topbar__eyebrow">Dashboard shell</p>
+              <h1>Good morning, Ada</h1>
+            </div>
+          </div>
+
+          <form class="search" role="search" aria-label="Search dashboard">
+            <label class="sr-only" for="global-search">Search</label>
+            <span class="search__icon" aria-hidden="true">⌕</span>
+            <input id="global-search" type="search" placeholder="Search courses, tasks, mentors…" />
+          </form>
+
+          <div class="topbar__actions" aria-label="Dashboard actions">
+            <button class="icon-button" type="button" aria-label="Notifications">
+              <span aria-hidden="true">◔</span>
+              <span class="status-dot" aria-hidden="true"></span>
+            </button>
+            <button class="button button--primary" type="button">New action</button>
+            <button class="avatar-button" type="button" aria-label="Open user menu">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80" alt="Ada profile" />
+            </button>
+          </div>
+        </header>
+
+        <main class="dashboard" id="main-content">
+          <section class="hero-card card" aria-labelledby="dashboard-title">
+            <div class="hero-card__content">
+              <span class="badge badge--accent">Design system foundation</span>
+              <h2 id="dashboard-title">A calm, responsive LMS workspace for focused learning.</h2>
+              <p>
+                The shell defines layout, navigation, component states, accessibility patterns, and empty/loading surfaces before course content is introduced.
+              </p>
+              <div class="hero-card__actions">
+                <button class="button button--primary" type="button">Continue setup</button>
+                <button class="button button--ghost" type="button">Preview tokens</button>
+              </div>
+            </div>
+            <div class="hero-card__panel" aria-label="System health summary">
+              <div>
+                <span class="metric__label">Readiness</span>
+                <strong>92%</strong>
+              </div>
+              <div class="progress" aria-label="Dashboard readiness: 92 percent">
+                <span style="width: 92%"></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-grid" aria-label="Dashboard components">
+            <article class="card metric">
+              <span class="metric__label">Active modules</span>
+              <strong>—</strong>
+              <p class="muted">Content state intentionally empty.</p>
+            </article>
+            <article class="card metric metric--loading" aria-busy="true">
+              <span class="skeleton skeleton--label"></span>
+              <span class="skeleton skeleton--value"></span>
+              <span class="skeleton skeleton--text"></span>
+            </article>
+            <article class="card metric">
+              <span class="metric__label">Focus streak</span>
+              <strong>12 days</strong>
+              <p class="muted">Sample shell data for visual balance.</p>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="card card--large" aria-labelledby="empty-title">
+              <div class="card__header">
+                <div>
+                  <span class="section-kicker">Learning</span>
+                  <h2 id="empty-title">Course content will appear here</h2>
+                </div>
+                <span class="badge badge--neutral">Empty state</span>
+              </div>
+              <div class="empty-state">
+                <div class="empty-state__icon" aria-hidden="true">▱</div>
+                <h3>No lessons added yet</h3>
+                <p>Use this surface later for modules, upcoming lessons, assessments, and progress insights.</p>
+                <button class="button button--secondary" type="button">Explore component states</button>
+              </div>
+            </article>
+
+            <aside class="card activity-card" aria-labelledby="activity-title">
+              <div class="card__header">
+                <div>
+                  <span class="section-kicker">System</span>
+                  <h2 id="activity-title">Shell checklist</h2>
+                </div>
+              </div>
+              <ul class="check-list">
+                <li><span aria-hidden="true">✓</span> Responsive desktop grid</li>
+                <li><span aria-hidden="true">✓</span> Component tokens</li>
+                <li><span aria-hidden="true">✓</span> Accessible controls</li>
+                <li><span aria-hidden="true">✓</span> Loading and empty states</li>
+              </ul>
+            </aside>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
